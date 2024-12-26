@@ -20,7 +20,7 @@ class CustomTalkerScreen extends StatelessWidget {
             TalkerLogType.error: Colors.red,
             TalkerLogType.warning: Colors.yellow,
             TalkerLogType.critical: Colors.redAccent,
-            // Добавьте другие типы логов и их цвета, если необходимо
+            // другие типы логов и их цвета, если необходимо
           },
         ),
       ),

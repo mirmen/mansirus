@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:talker_flutter/talker_flutter.dart';
-import '../services/translation_service.dart';
+import '../services/translation_uriit_service.dart';
 
-// КЛАСС УСТАРЕВШИЙ И ИСПОЛЬЗУЕТСЯ ДЛЯ СОБСТВЕННОГО API, А НЕ API СОВМЕСТИТЕЛЬНОГО С ЮНИИИТ
+// КЛАСС ИСПОЛЬЗУЕТСЯ ДЛЯ СОБСТВЕННОГО API, А НЕ API СОВМЕСТИТЕЛЬНОГО С ЮНИИИТ
 /*
 class TranslationViewModel extends ChangeNotifier {
   final Talker talker = TalkerFlutter.init(); // Инициализация Talker
@@ -72,6 +72,7 @@ class TranslationViewModel extends ChangeNotifier {
   }
 } */
 
+// Класс, совместимый с ЮНИИИТ
 class TranslationViewModel extends ChangeNotifier {
   final Talker talker = TalkerFlutter.init();
   late final TranslationService _translationService;

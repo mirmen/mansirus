@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 class MansyKeyboard extends StatelessWidget {
   final Function(String) onCharacterSelected;
 
-  MansyKeyboard({required this.onCharacterSelected});
+  const MansyKeyboard({super.key, required this.onCharacterSelected});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.01),
       child: GridView.count(
         crossAxisCount: 10,
         shrinkWrap: true,

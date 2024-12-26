@@ -3,50 +3,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:talker/talker.dart';
 
-// КЛАСС УСТАРЕВШИЙ И ИСПОЛЬЗУЕТСЯ ДЛЯ СОБСТВЕННОГО API, А НЕ API СОВМЕСТИТЕЛЬНОГО С ЮНИИИТ
-/* class TranslationService {
-  final String apiHealth = "http://10.8.1.12:8000/health";
-  final String apiUrl = "http://10.8.1.12:8000/translate/";
-  final Talker talker;
-
-  TranslationService(this.talker);
-
-  Future<String> translate(String text, String direction) async {
-    try {
-      final response = await http
-          .post(
-            Uri.parse(apiUrl + direction),
-            headers: {'Content-Type': 'application/json'},
-            body: jsonEncode({'text': text}),
-          )
-          .timeout(const Duration(seconds: 600));
-
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        talker.info('Успешный перевод: $text -> ${data['translated_text']}');
-        return data['translated_text'];
-      } else {
-        throw Exception('Не удалось перевести: ${response.statusCode}');
-      }
-    } catch (e) {
-      talker.error('Ошибка перевода: $e');
-      return 'Произошла ошибка при переводе. Пожалуйста, попробуйте еще раз позже.';
-    }
-  }
-
-  Future<bool> checkApiAvailability() async {
-    try {
-      final response = await http
-          .get(Uri.parse(apiHealth))
-          .timeout(const Duration(seconds: 20));
-      talker.info('API по адресу $apiUrl доступен');
-      return response.statusCode == 200;
-    } catch (e) {
-      talker.error('API по адресу $apiUrl не доступен, ошибка: $e');
-      return false;
-    }
-  }
-} */
+// ВАЖНО ВАЖНО ВАЖНО ВАЖНО ВАЖНО ВАЖНО ВАЖНО ВАЖНО ВАЖНО ВАЖНО ВАЖНО
+// Этот класс используется для работы с API, предоставленным URIIT (ЮНИИИТ)
+// Если вы испольузете собственное API на Flask (Python), закомментируйте этот класс и используйте translation_custom_service.dart.
 
 class TranslationService {
   final String apiBaseUrl = "http://91.198.71.199:7012";

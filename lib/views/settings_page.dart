@@ -54,8 +54,7 @@ class SettingsPage extends StatelessWidget {
           ),
           InfoItem(
             title: 'Разработчик',
-            subtitle:
-                'Студент ХМТПК \nМельгазиев Э.Р (m1rmen)\nTelegram: @emlgzv',
+            subtitle: 'Melgaziev Emir\nmelgaziev.site\nm1rmen.tech',
             icon: Icons.person,
           ),
           InfoItem(
@@ -71,7 +70,7 @@ class SettingsPage extends StatelessWidget {
           ),
           InfoItem(
             title: 'Обратная связь',
-            subtitle: 'emir.melgaziev@gmail.com',
+            subtitle: 'github.com/mirmen/mansirus',
             icon: Icons.email,
           ),
         ],
