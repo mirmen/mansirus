@@ -1,33 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'view_models/translation_view_model.dart';
-import 'views/home_page.dart';
+import 'package:talker_flutter/talker_flutter.dart';
+import 'config.dart';
+import 'data/repositories/translation_service_factory.dart';
+import 'domain/clipboard/services.dart';
+import 'domain/health/checker.dart';
+import 'domain/health/custom_checker.dart';
+import 'domain/health/uriit_checker.dart';
+import 'domain/translation/repositories.dart';
+import 'presentation/views/home/home_page.dart';
 
+final talker = TalkerFlutter.init();
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => TranslationViewModel()),
+        Provider<Talker>(create: (_) => talker),
+        Provider<HealthChecker>(
+          create: (_) => AppConfig.apiType == 'custom'
+              ? CustomHealthChecker(AppConfig.apiUrl)
+              : UriitHealthChecker(AppConfig.apiUrl),
+        ),
+        Provider<TranslationRepository>(
+          create: (context) => TranslationServiceFactory.createService(
+            AppConfig.apiType,
+            AppConfig.apiUrl,
+            context.read<HealthChecker>(), // Передаем healthChecker
+            context.read<Talker>(), // Передаем Talker
+          ),
+        ),
+        Provider<ClipboardService>(
+          create: (_) => FlutterClipboardService(),
+        ),
       ],
-      child: const TranslatorApp(),
+      child: const MyApp(),
     ),
   );
 }
 
-class TranslatorApp extends StatelessWidget {
-  const TranslatorApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Mansirus',
       theme: ThemeData(
-        primaryColor: const Color(0xFF2E7D32),
-        scaffoldBackgroundColor: const Color(0xFFF7F9FC),
-        textTheme: GoogleFonts.montserratTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        primarySwatch: Colors.blue,
       ),
       home: const HomePage(),
     );
