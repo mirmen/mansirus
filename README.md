@@ -4,7 +4,7 @@
 
 [![Project Status](https://img.shields.io/badge/Project%20Status-Inactive-yellow.svg)](https://shields.io/)[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)  
 ![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20Android%20%7C%20Windows%20%7C%20macOS%20%7C%20Linux-blue.svg)
-[![Platform](https://img.shields.io/badge/Platform-Flutter-green)](https://flutter.dev/)  [![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green?logo=fastapi)](https://fastapi.tiangolo.com)![Languages](https://img.shields.io/badge/Languages-Russian%20%7C%20Mansi-blue.svg)
+[![Platform](https://img.shields.io/badge/Platform-Flutter-green)](https://flutter.dev/)  [![FastAPI](https://img.shields.io/badge/FastAPI-0.109-green?logo=fastapi)](https://fastapi.tiangolo.com) ![Languages](https://img.shields.io/badge/Languages-Russian%20%7C%20Mansi-blue.svg)
 
 ---
 
