@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import '../translation/errors.dart';
-import 'checker.dart';
+import '../../../domain/translation/errors.dart';
+import '../../../domain/health/checker.dart';
 
 /// Реализация проверки доступности для кастомного API
 class CustomHealthChecker implements HealthChecker {

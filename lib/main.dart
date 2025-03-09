@@ -5,8 +5,8 @@ import 'config.dart';
 import 'data/repositories/translation_service_factory.dart';
 import 'domain/clipboard/services.dart';
 import 'domain/health/checker.dart';
-import 'domain/health/custom_checker.dart';
-import 'domain/health/uriit_checker.dart';
+import 'data/repositories/custom/custom_checker.dart';
+import 'data/repositories/uriit/uriit_checker.dart';
 import 'domain/translation/repositories.dart';
 import 'presentation/views/home/home_page.dart';
 
