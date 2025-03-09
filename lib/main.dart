@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mansirus/data/repositories/clipboard_service.dart';
 import 'package:provider/provider.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 import 'config.dart';
