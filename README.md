@@ -210,8 +210,8 @@ python app.py
 class AppConfig {
 static const String apiType = 'custom'; // 'custom' для локального/пользовательского API, 'uriit' для API ЮНИИТ
 static const String apiUrl = 'http://localhost:8000'; // Адрес вашего сервера или сервера ЮНИИТ
-}```
-
+}
+```
 
 - Если вы используете **локальный или собственный сервер** , установите `apiType = 'custom'` и укажите соответствующий `apiUrl`.
 - Если вы хотите использовать **API от ЮНИИТ** , установите `apiType = 'uriit'`. В этом случае `apiUrl` будет игнорироваться.
